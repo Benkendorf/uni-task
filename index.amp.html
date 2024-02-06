@@ -326,15 +326,11 @@
         align-items: flex-start;
         gap: 17px;
       }
-      .features__content {
-        display: flex;
-        flex-direction: column;
-        gap: 22px;
-      }
       .features__topic {
         color: #062033;
         font-size: 20px;
         font-weight: 600;
+        margin-bottom: 22px;
       }
       .features__text {
         font-size: 13px;
@@ -417,37 +413,7 @@
         height: auto;
       }
       .works__hidden {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #0eb493d0;
-        z-index: 10;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: 0.3s;
-      }
-      .works__hidden:hover {
-        opacity: 1;
-      }
-      .works__hidden * {
-        color: white;
-      }
-      .works__hidden-topic {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 10px;
-      }
-      .works__hidden-sub {
-        font-size: 14px;
-        font-weight: 400;
-      }
-      .works__icon {
-        margin-bottom: 29px;
+        display: none;
       }
       @media (max-width: 1167px) {
         .works {
@@ -498,12 +464,6 @@
         width: 100%;
         max-width: 270px;
       }
-      .team__item:hover .team__hidden {
-        opacity: 1;
-      }
-      .team__item:hover .team__name {
-        color: #0eb493;
-      }
       .team__item-title {
         text-align: center;
         color: white;
@@ -530,19 +490,7 @@
         filter: grayscale(1);
       }
       .team__hidden {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 10;
-        background-color: #0eb493d0;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: 0.3s;
-        padding: 23px;
+        display: none;
       }
       .team__socials {
         display: flex;
@@ -706,11 +654,6 @@
         flex-direction: column;
         gap: 29px;
       }
-      .discuss__form {
-        display: flex;
-        flex-direction: column;
-        gap: 29px;
-      }
       .discuss__input {
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         color: #6a737b;
@@ -718,9 +661,11 @@
         padding: 20px 0px;
         width: 100%;
       }
+      .discuss__input:first-child {
+        margin-bottom: 29px;
+      }
       .discuss__inputs {
-        display: flex;
-        gap: 29px;
+        margin-bottom: 29px;
       }
       .discuss__hello {
         font-size: 24px;
